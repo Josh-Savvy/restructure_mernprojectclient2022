@@ -1,0 +1,139 @@
+body {
+  background: #e9eff7;
+}
+
+#nprogress .bar {
+  height: 4px !important;
+  background: white !important;
+}
+
+.nav a:hover {
+  border-radius: 0px;
+}
+
+.nav {
+  position: fixed !important;
+  width: 100vw;
+  z-index: 100;
+}
+.admin_dashboard_links:hover {
+  background-color: gray !important;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+
+.hideMenuList {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+.admin_dashboard_links {
+  width: 90%;
+  padding: 10px 5px 0px 10px;
+  user-select: none;
+  cursor: pointer;
+  list-style: none;
+  margin-left: -20px;
+}
+
+/* user  dashboard styles*/
+
+.side-toggle-btn {
+  position: fixed;
+  top: 1.5%;
+  display: none;
+  left: 90%;
+  z-index: 200;
+}
+
+.side-toggle-btn i {
+  font-size: 20px;
+}
+.side-toggle-btn:hover i {
+  color: orange !important;
+}
+.side-toggle-btn:hover {
+  cursor: pointer;
+}
+.sidebar {
+  margin: 0;
+  margin-left: 0;
+  padding: 10px;
+  width: 30%;
+  z-index: 100;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  transition: 1s;
+  box-shadow: 4px 1px 3px rgb(23 23 23 / 24%);
+}
+
+.sidebar a {
+  display: block;
+  width: 100%;
+  text-decoration: none !important;
+  text-align: center !important;
+  margin: 0 -10%;
+  float: left !important;
+}
+
+.sidebar a:hover {
+  color: rgb(4, 4, 228);
+}
+
+.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+#overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100vw;
+  position: absolute;
+  z-index: 100;
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    width: 73%;
+    height: 100% !important;
+    margin-left: -250%;
+  }
+  .side-toggle-btn {
+    display: block;
+  }
+  .sidebar a {
+    float: left;
+  }
+  .content {
+    margin-left: 0;
+  }
+  #hide_for_sidenav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar {
+    margin-left: 0 !important;
+  }
+  .side-toggle-btn {
+    display: none !important;
+  }
+  #hide_for_sidenav {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+#user_delete_btn:hover {
+  cursor: pointer;
+}
