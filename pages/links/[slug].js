@@ -55,9 +55,9 @@ const Links = ({
   };
 
   const handleClick = async (linkId) => {
-    const response = await axios.put(`${API}/click-count`, { linkId });
+    await axios.put(`${API}/click-count`, { linkId });
     loadUpdatedLinks();
-    loadTrendingLinks(response.data);
+    loadTrendingLinks();
   };
 
   const listOfLinks = () =>

@@ -22,17 +22,17 @@ const Home = ({ categories }) => {
     runSearch();
   }, [searchTerm]);
 
+  useEffect(() => {
+    loadTrendingLinks();
+  }, []);
+
   const loadTrendingLinks = async () => {
     const response = await axios.get(`${API}/links/trending`);
     setTrendingLinks(response.data);
   };
 
-  useEffect(() => {
-    loadTrendingLinks();
-  }, []);
-
-  const handleClick = async (e, linkId) => {
-    await axios.put(`${API}/click-count`, { linkId });
+  const handleClick = (linkId) => {
+    axios.put(`${API}/click-count`, { linkId });
     loadTrendingLinks();
   };
 
